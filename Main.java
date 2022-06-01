@@ -27,6 +27,8 @@ public class Main {
         for (int i = 0; i < p; i++) {
             if (num.compareTo(Main.datos.get(i)[0]) == 0) {
                 System.out.println(Main.datos.get(i)[1]);
+            } else {
+                System.out.println("No se encontró nada al respecto");
             }
         }
     }
