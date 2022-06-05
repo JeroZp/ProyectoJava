@@ -20,6 +20,7 @@ public class Main {
         
         System.out.println("-¿Sobre cuál número quieres buscar información?");
         int p = Main.datos.size();
+        boolean encontrado = false;
         Scanner sc = new Scanner(System.in);
         String num = sc.next();
         System.out.println("Los resultados del número " + num + ":");
@@ -27,9 +28,11 @@ public class Main {
         for (int i = 0; i < p; i++) {
             if (num.compareTo(Main.datos.get(i)[0]) == 0) {
                 System.out.println(Main.datos.get(i)[1]);
-            } else {
-                System.out.println("No se encontró nada al respecto");
+                encontrado = true;
             }
+        }
+        if (!encontrado){
+            System.out.println("No se encontraron resultados al respecto")
         }
     }
     
